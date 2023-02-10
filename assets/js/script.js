@@ -40,6 +40,8 @@ function generatePassword () {
     var confirmLowerCase = confirm('Do you want to include Lower Case Letters in Your Password?\nSelect OK for Yes and Cancel for No');
     var confirmNumbers = confirm('Do you want to include Numbers in Your Password?\nSelect OK for Yes and Cancel for No');
     var confirmSpecial = confirm('Do you want to include Special Characters in Your Password?\nSelect OK for Yes and Cancel for No');
+    
+    alert('You selected the following characters: \n\nUpperCase Letters: ' + confirmUpperCase + '\nLowerCase Letters: ' + confirmLowerCase + '\nNumbers: ' + confirmNumbers + '\nSpecial Characters: ' + confirmSpecial);
 
     //Makes sure at least 1 Character type is selected
     while (!confirmUpperCase && !confirmLowerCase && !confirmNumbers && !confirmSpecial) {
