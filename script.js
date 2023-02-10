@@ -7,7 +7,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add code for the generatePassword() function declaration
@@ -19,17 +18,18 @@ function generatePassword () {
     var special = '<>?:"}{+_)(*&^%$#@!~`,./];[=-';
 
     //Add Prompt to Collect Desired Length of the Password
-    var passwordLength = prompt('How many characters would you like your password to be? Select a Number as small as 8 and as large as 128');
+    var passwordLength = prompt('How many characters would you like your password to be? \nSelect a Number as small as 8 and as large as 128');
 
-    passwordLength = Number(passwordLength);
+    passwordLength = parseInt(passwordLength);
+    //How do I deal with this if the user types something ridiculous? For further look up later
 
-    //Makes sure the Password Length Meets the Criteria (8-128 Characters)
+    //Makes sure the Password Length Meets the Criteria (8-128 Characters) & Generate Error Message if You Click Cancel or enter a string on the First Attempt
     if (!passwordLength) {
         return 'Error: Try Again to Generate Password';
-    } else while ((Number.isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128)) {
+    } else while ((isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128)) {
             alert('Please select a number between 8 and 128');
             var passwordLength = prompt('How many characters would you like your password to be? Select a Number as small as 8 and as large as 128');
-            passwordLength = Number(passwordLength);
+            passwordLength = parseInt(passwordLength);
         }
 
     //Create Empty String Variable to Hold Characters User Wants to Include in Their New Password
