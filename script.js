@@ -31,7 +31,7 @@ function generatePassword () {
         passwordLength = Number(passwordLength);
     }
 
-    //Create Empty String to Hold Characters User Wants to Include in Their New Password
+    //Create Empty String Variable to Hold Characters User Wants to Include in Their New Password
     var passwordString = '';
 
     //Adds Prompts for User to Pick What Characters to Include in their new password
@@ -63,6 +63,25 @@ function generatePassword () {
     if (confirmSpecial) {
     passwordString = passwordString.concat(special);
     }
+
+    console.log(passwordString);
+    console.log(typeof passwordLength);
+    console.log(passwordLength);
+    console.log(passwordString[2]);
+
+    //Create Empty String Variable to Hold Generated Password
+    var uniquePassword = ''
+
+    //Loop to select random characters from the passwordString according to how long we chose for our password to be
+    for (var i = 0; i < passwordLength; i++) {
+    uniquePassword = uniquePassword.concat(passwordString[Math.floor(Math.random()*passwordString.length)]);
+    }
+
+    console.log(uniquePassword);
+
+    //Sets the value of the function equal to the generated password held in the uniquePassword variable
+    return uniquePassword;
+
 
 }
 
