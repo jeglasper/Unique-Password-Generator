@@ -21,7 +21,7 @@ function generatePassword () {
     var passwordLength = prompt('How many characters would you like your password to be? \nSelect a Number as small as 8 and as large as 128');
 
     passwordLength = parseInt(passwordLength);
-    //How do I deal with this if the user types something ridiculous? For further look up later
+    //How do I deal with this if the user types something ridiculous? For further research - look up later
 
     //Makes sure the Password Length Meets the Criteria (8-128 Characters) & Generate Error Message if You Click Cancel or enter a string on the First Attempt
     if (!passwordLength) {
@@ -78,7 +78,6 @@ function generatePassword () {
     //Sets the value of the function equal to the generated password held in the uniquePassword variable
     return uniquePassword;
 }
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
