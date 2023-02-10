@@ -10,9 +10,8 @@ function writePassword() {
 
 }
 
-// Add code for the generatePassword() function declatiation
+// Add code for the generatePassword() function declaration
 function generatePassword () {
-    
     //Local String Variables to pull letters for generated password
     var numbers = '0123456789';
     var upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -64,11 +63,6 @@ function generatePassword () {
     passwordString = passwordString.concat(special);
     }
 
-    console.log(passwordString);
-    console.log(typeof passwordLength);
-    console.log(passwordLength);
-    console.log(passwordString[2]);
-
     //Create Empty String Variable to Hold Generated Password
     var uniquePassword = ''
 
@@ -77,12 +71,10 @@ function generatePassword () {
     uniquePassword = uniquePassword.concat(passwordString[Math.floor(Math.random()*passwordString.length)]);
     }
 
-    console.log(uniquePassword);
+    console.log('My New Password: ' + uniquePassword);
 
     //Sets the value of the function equal to the generated password held in the uniquePassword variable
     return uniquePassword;
-
-
 }
 
 
